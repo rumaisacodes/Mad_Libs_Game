@@ -1,0 +1,39 @@
+import random
+
+print("Welcome to the Mab Libs game!")
+print("Answer the questions to create a  fun story.\n")
+
+while True:
+    name = input("Enter a name: ")
+    place = input("Enter a place: ")
+    adjective = input("Enter a weird adjective: ")
+    noun = input("Enter a random object: ")
+    verb = input("Enter a verb ending with -ing: ")
+    animal = input("Enter an animal: ")
+
+    story1 = f"""
+One day, {name} went to {place}.
+it was a very {adjective} day.
+suddenly, {noun} started {verb}.
+everyone screamed, even the {animal}!
+"""
+    story2 = f"""
+At {place}, {name} found a {adjective} {noun}.
+without thinking, it began {verb}.
+a {animal} watched in complete confusion.
+"""
+    story3 = f"""
+{name} was walking through {place} when a {animal} appeared.
+it looked very {adjective} and was holding a {noun}.
+out of nowhere it started {verb}.
+Best day ever!
+"""
+    stories = [story1, story2, story3]
+
+    print("n\ your mad libs story")
+    print(random.choice(stories))
+
+    play_again = input("\nDo you want to play again? (yes/no?): ").lower()
+    if play_again != "yes":
+        print("Thanks for playing Mad Libs!")
+        break
